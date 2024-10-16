@@ -22,6 +22,7 @@ templates:
     title: Example MDX Template
     description: This is an example mdx template.
     src: ./mdx/example_mdx_template.mdx
+    language: mdx
   - name: example_python_template
     title: Example Python Template
     description: This is an example python template.
