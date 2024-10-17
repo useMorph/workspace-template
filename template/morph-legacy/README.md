@@ -20,19 +20,14 @@ the basic structure and files necessary for project setup and management.
 ## Directory Structure
 
 ```plaintext
-├── canvases/
-│   └─ sample_canvas.json // An example canvas file
 ├── src/
-│   ├─ pages
-│   │  └─ page1.mdx // An example MDX application page
-│   ├─ python
-│   │  └─ visualize.py // An example visualization script
-│   ├─ sql
-│   │  │─ get_all_orders.sql
-│   │  └─ calculate_customer_orders.sql
-│   └─ visualization
-│      └─ get_orders.vg.json // An example Vega-Lite visualization file
+│   ├── example_python_cell.py
+│   └── example_sql_cell.sql
 ├── templates/
+│   ├── python
+│   │   └── example_python_template.py
+│   └── sql
+│       └── example_sql_template.sql
 ├── .env
 ├── .gitignore
 ├── morph_project.sqlite3
@@ -41,12 +36,7 @@ the basic structure and files necessary for project setup and management.
 └── README.md
 ```
 
-- `canvases/`: Directory for storing canvas files.
-- `src/`: Directory for storing source files.
-  - `pages/`: Directory for storing MDX application pages.
-  - `python/`: Directory for storing Python scripts.
-  - `sql/`: Directory for storing SQL scripts.
-  - `visualization/`: Directory for storing visualization files.
+- `src/`: Directory for storing Python and SQL cell files.
 - `templates/`: Directory for storing user-defined custom templates.
 - `.env`: File for setting environment variables.
 - `.gitignore`: File for specifying files and directories to exclude from Git.
