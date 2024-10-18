@@ -19,3 +19,11 @@ This project uses [pre-commit](https://pre-commit.com/) to enforce code quality 
 ```shell
 poetry run pre-commit install
 ```
+
+## NB!
+
+After adding a new template, make sure `.env` file is added because if it may be ignored by '.gitignore' file in the template directory.
+
+```shell
+git add -f template/${TEMPLATE_DIR}/.env
+```
