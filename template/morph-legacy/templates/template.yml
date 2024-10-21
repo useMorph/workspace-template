@@ -9,7 +9,6 @@
 #         title: <template_title>
 #         description: <template_description>
 #         src: <template_source> [required] must be full path or relative path from this template.yaml
-#         language: <template_language> [required|options:"python", "sql"]
 #
 # [Compiling]
 # After editing this file, you need to compile it using the following command.
@@ -22,14 +21,11 @@ templates:
     title: Example MDX Template
     description: This is an example mdx template.
     src: ./mdx/example_mdx_template.mdx
-    language: mdx
   - name: example_python_template
     title: Example Python Template
     description: This is an example python template.
     src: ./python/example_python_template.py
-    language: python
   - name: example_sql_template
     title: Example SQL Template
     description: This is an example sql template.
     src: ./sql/example_sql_template.sql
-    language: sql
