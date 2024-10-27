@@ -1,0 +1,75 @@
+export const name = "index"
+export const title = "AWS Cost Management"
+export const dateRangeStart = variable("2024-01-01");
+export const dateRangeEnd = variable("2024-09-30");
+export const productCodeList = getJson({
+  alias: 'get_aws_product_list',
+});
+export const productCodeSelected = variable("all");
+
+# AWS Cloud Cost Report
+
+This report generates a cost report for AWS.
+Let's Try customizing the data retrieval section in Python to explore additional possibilities as outlined below.
+
+- Future cost forecasting
+- Anomaly detection for productt with rapid cost increases
+
+## How to use
+
+Please enter the following three values in the .env file before use.
+Make sure that the AWS IAM being used has the BillingReadOnlyAccess role attached:
+
+- AWS_ACCESS_KEY
+- AWS_SECRET_KEY
+- AWS_REGION
+
+## Result
+
+<div className="p-4 border border-gray-300 rounded-lg shadow-md">
+    <Grid cols="1">
+        <div className="flex items-center gap-3">
+            <p>Date Range:</p>
+            <div className="flex-1">
+                <VariableDatePicker
+                    type="range"
+                    variables={[
+                        dateRangeStart,
+                        dateRangeEnd
+                    ]}
+                />
+            </div>
+        </div>
+        <div className="flex items-center gap-3">
+            <p>Product Code:</p>
+            <div className="flex-1">
+                <VariableSelect variable={productCodeSelected}>
+                    <VariableSelectItem value="all">Not selected</VariableSelectItem>
+                    <VariableSelectItems items={productCodeList} labelKey="product_code" valueKey="product_code" />
+                </VariableSelect>
+            </div>
+        </div>
+    </Grid>
+
+    <div className="h-[400px] w-full mt-4">
+        <Embed
+            alias="visualize_cost_by_product"
+            variables={{
+                start_date: dateRangeStart,
+                end_date: dateRangeEnd,
+                product_code: productCodeSelected
+            }}
+        />
+    </div>
+</div>
+
+## Raw Data
+
+<DataTable
+    alias="get_aws_cost"
+    variables={{
+        start_date: dateRangeStart,
+        end_date: dateRangeEnd,
+        product_code: productCodeSelected
+    }}
+/>
