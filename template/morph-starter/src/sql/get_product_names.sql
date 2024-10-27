@@ -2,14 +2,11 @@
 -- For more information: https://www.morphdb.io/docs
 {{
 	config(
-		name="calculate_customer_orders"
+		name="get_product_names"
 	)
 }}
 
 select
-	product_name,
-	sum(quantity * unit_price) as sales
+	distinct product_name
 from
 	customer_orders
-group by
-	product_name

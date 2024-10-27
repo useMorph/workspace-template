@@ -10,3 +10,7 @@ select
 	*
 from
 	customer_orders
+{% if product_name != "all" %}
+where
+	product_name = '{{ product_name }}'
+{% endif %}

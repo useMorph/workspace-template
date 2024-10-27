@@ -2,16 +2,32 @@
   "cells": {
     "get_all_orders": {
       "coordinates": {
-        "x": 350,
-        "y": 280,
+        "x": 490,
+        "y": -230,
         "w": 600,
         "h": 400
       }
     },
     "visualize": {
       "coordinates": {
-        "x": 1250,
-        "y": 280,
+        "x": 1330,
+        "y": 270,
+        "w": 600,
+        "h": 400
+      }
+    },
+    "calculate_customer_orders": {
+      "coordinates": {
+        "x": 1330,
+        "y": -230,
+        "w": 600,
+        "h": 400
+      }
+    },
+    "get_all_orders_count-vega-lite": {
+      "coordinates": {
+        "x": 500,
+        "y": 270,
         "w": 600,
         "h": 400
       }

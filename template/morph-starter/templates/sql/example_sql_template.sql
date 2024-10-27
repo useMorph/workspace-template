@@ -2,9 +2,9 @@
 -- For more information: https://www.morphdb.io/docs
 {{
 	config(
-		name="{MORPH_NAME}",
-		description="{MORPH_DESCRIPTION}",
-        connection_slug="{MORPH_CONNECTION}",
+		name="{PUT_NAME_HERE}",
+		description="{PUT_DESCRIPTION_HERE}",
+        connection="{PUT_CONNECTION_HERE}",
 	)
 }}
 

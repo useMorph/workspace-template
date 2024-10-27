@@ -1,5 +1,8 @@
 {
   "morph_name": "get_all_orders_count-vega-lite",
+  "data": {
+    "name": "morph::get_all_orders"
+  },
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "mark": "bar",
   "encoding": {
@@ -11,8 +14,5 @@
       "aggregate": "count"
     }
   },
-  "width": "container",
-  "data": {
-    "name": "morph::get_all_orders"
-  }
+  "width": "container"
 }
