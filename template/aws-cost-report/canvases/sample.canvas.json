@@ -1,33 +1,25 @@
 {
   "cells": {
-    "get_all_orders": {
+    "get_aws_cost": {
       "coordinates": {
-        "x": 490,
-        "y": -230,
+        "x": 890,
+        "y": -280,
         "w": 600,
         "h": 400
       }
     },
-    "visualize": {
+    "visualize_cost_by_product": {
       "coordinates": {
-        "x": 1330,
-        "y": 270,
+        "x": 410,
+        "y": 300,
         "w": 600,
         "h": 400
       }
     },
-    "calculate_customer_orders": {
+    "get_aws_product_list": {
       "coordinates": {
-        "x": 1330,
-        "y": -230,
-        "w": 600,
-        "h": 400
-      }
-    },
-    "get_all_orders_count-vega-lite": {
-      "coordinates": {
-        "x": 500,
-        "y": 270,
+        "x": 1320,
+        "y": 300,
         "w": 600,
         "h": 400
       }
