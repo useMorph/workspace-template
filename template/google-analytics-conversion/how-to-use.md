@@ -1,5 +1,7 @@
 # How to Use
 
+To use this template, you need to load data from Google Analytics into BigQuery in advance.
+
 ## Step 1: Create a Connection
 
 In the "Data" section, set up a connection to BigQuery using your Google Analytics data.
