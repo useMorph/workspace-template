@@ -1,48 +1,53 @@
 export const name = 'index';
-export const title = 'Sample page';
+export const title = 'Top';
 
-# Sample app
+# GA Data Analysis: From Landing to Conversion
 
-This application analyzes sample data about customer orders in retail.
+This analysis tracks the page flow of visitors through to conversion.
 
-## Sales by Product
+## How to Use
 
-Try setting the *Minimum Sales* to 5000.
+### Step 1: Create a Connection
 
-export const minSales = variable("10000");
+In the "Data" section, set up a connection to BigQuery using your Google Analytics data.
+Ensure you name the connection `bq_google_analytics`, as defined in [`./src/sql/ga_data_extraction.sql`].
 
-<Card className="p-6 mt-2">
-    <label>Minimum Sales</label>
-    <VariableInput variable={minSales} />
+### Step 2: Modify .sql / .py Files
+
+- [`src/sql/ga_data_extraction.sql`]: Update the `FROM` clause to reference your Google Analytics dataset.
+- [`src/python/calculate_traffic_flow.py`]: Set the default target link to your conversion URL.
+- [`src/python/visualize_traffic_flow.py`]: Set the default target link here as well.
+
+The target link is the URL representing your conversion goal.
+
+### Step 3: Edit this File (index.mdx)
+
+- Update the `targetLink` variable with your default target link (e.g., `"https://www.morph-data.io/pricing"`).
+
+Once setup is complete, you'll be able to view the following data sections.
+
+## Result
+
+export const targetLink = variable("PUT_YOUR_DEFAULT_TARGET_LINK");
+
+<Grid cols="1">
+    <div className="flex items-center gap-3">
+        <p>URL:</p>
+        <div className="flex-1">
+            <VariableInput variable={targetLink} />
+        </div>
+    </div>
     <Embed
         height="600px"
         width="100%"
-        alias={"visualize"}
-        variables={{min_sales:minSales}}
+        alias={"visualize_traffic_flow"}
+        variables={{target_link:targetLink}}
     />
-</Card>
-
-## Orders
-
-You can filter with **Product Name**.
-
-export const productSelected = variable("all");
-export const productNames = getJson({
-    alias: "get_product_names"
-})
-
-<Grid cols="1">
-    <VariableSelect variable={productSelected}>
-        <VariableSelectItem value="all">All</VariableSelectItem>
-        <VariableSelectItems items={productNames} labelKey="product_name" valueKey="product_name"/>
-    </VariableSelect>
-    <div>
-        <DataTable
-            alias={"get_all_orders"}
-            variables={{
-                product_name: productSelected
-            }}
-            height = {300}
-        />
-    </div>
 </Grid>
+
+###  Raw data
+
+<DataTable
+    alias={"calculate_traffic_flow"}
+    variables={{target_link:targetLink}}
+/>

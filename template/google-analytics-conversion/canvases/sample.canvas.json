@@ -1,33 +1,25 @@
 {
   "cells": {
-    "get_all_orders": {
+    "calculate_traffic_flow": {
       "coordinates": {
-        "x": 490,
-        "y": -230,
+        "x": 980,
+        "y": -180,
         "w": 600,
         "h": 400
       }
     },
-    "visualize": {
+    "ga_data_extraction": {
       "coordinates": {
-        "x": 1330,
-        "y": 270,
+        "x": 990,
+        "y": -700,
         "w": 600,
         "h": 400
       }
     },
-    "calculate_customer_orders": {
+    "visualize_traffic_flow": {
       "coordinates": {
-        "x": 1330,
-        "y": -230,
-        "w": 600,
-        "h": 400
-      }
-    },
-    "get_all_orders_count-vega-lite": {
-      "coordinates": {
-        "x": 500,
-        "y": 270,
+        "x": 980,
+        "y": 320,
         "w": 600,
         "h": 400
       }
