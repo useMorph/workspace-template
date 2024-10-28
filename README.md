@@ -47,3 +47,5 @@ Example:
 In the above example, the SQL scripts will be executed in the order specified by the prefix number.
 
 If the SQL scripts are not prefixed with numbers, they will be executed in random order.
+
+NB!) In Morph cloud environment, `init` directory will be deleted soon after the scripts are executed.
