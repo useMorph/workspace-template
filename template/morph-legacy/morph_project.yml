@@ -1,5 +1,0 @@
-default_connection: MORPH_BUILTIN_DB
-source_paths:
-- src
-template_paths:
-- templates
