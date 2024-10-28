@@ -1,5 +1,5 @@
 -- Morph SQL configuration
--- For more information: https://www.morphdb.io/docs
+-- For more information: https://www.morph-data.io
 {{
 	config(
 		name="get_all_orders"

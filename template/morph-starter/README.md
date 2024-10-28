@@ -79,4 +79,4 @@ This command reflects the contents of `morph.yaml` in the project and applies th
 
 ## Support
 
-If you have any questions or need support regarding the project, please refer to the [official documentation](https://docs.morphdb.io) or contact the support team on our [Discord server](https://discord.gg/BGmpQQUEUZ).
+If you have any questions or need support regarding the project, please refer to the [official documentation](https://docs.morph-data.io) or contact the support team on our [Discord server](https://discord.gg/BGmpQQUEUZ).
