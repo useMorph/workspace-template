@@ -10,7 +10,7 @@ select
 	*
 from
 	customer_orders
-{% if product_name != "all" %}
+{% if product_name is defined and product_name != "all" %}
 where
 	product_name = '{{ product_name }}'
 {% endif %}
