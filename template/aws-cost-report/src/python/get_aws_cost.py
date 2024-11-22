@@ -8,7 +8,7 @@ from morph import MorphGlobalContext
 
 # Morph decorators
 # The `@morph.func` decorator required to be recognized as a function in morph.
-# For more information: https://www.morph-data.io
+# For more information: https://docs.morph-data.io
 @morph.func
 @morph.variables("start_date", default="2024-07-01")
 @morph.variables("end_date", default="2024-07-31")
