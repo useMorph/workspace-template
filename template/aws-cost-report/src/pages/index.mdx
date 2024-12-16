@@ -1,9 +1,9 @@
-export const name = "index"
-export const title = "AWS Cost Management"
+export const title = "AWS App";
+
 export const dateRangeStart = variable("2024-01-01");
 export const dateRangeEnd = variable("2024-09-30");
 export const productCodeList = getJson({
-  alias: 'get_aws_product_list',
+  loadData: 'get_aws_product_list',
 });
 export const productCodeSelected = variable("all");
 
@@ -55,7 +55,7 @@ After setting up the environment variables, you can see the following data secti
 
     <div className="h-[400px] w-full mt-4">
         <Embed
-            alias="visualize_cost_by_product"
+            loadData="visualize_cost_by_product"
             variables={{
                 start_date: dateRangeStart,
                 end_date: dateRangeEnd,
@@ -68,7 +68,7 @@ After setting up the environment variables, you can see the following data secti
 ## Raw Data
 
 <DataTable
-    alias="get_aws_cost"
+    loadData="get_aws_cost"
     variables={{
         start_date: dateRangeStart,
         end_date: dateRangeEnd,
