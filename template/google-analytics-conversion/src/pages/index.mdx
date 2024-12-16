@@ -1,5 +1,4 @@
-export const name = 'index';
-export const title = 'Top';
+export const title = "GA App";
 
 # GA Data Analysis: From Landing to Conversion
 
@@ -46,7 +45,7 @@ export const targetLink = variable("PUT_YOUR_DEFAULT_TARGET_LINK");
     <Embed
         height="600px"
         width="100%"
-        alias={"visualize_traffic_flow"}
+        loadData={"visualize_traffic_flow"}
         variables={{target_link:targetLink}}
     />
 </Grid>
@@ -54,6 +53,6 @@ export const targetLink = variable("PUT_YOUR_DEFAULT_TARGET_LINK");
 ###  Raw data
 
 <DataTable
-    alias={"calculate_traffic_flow"}
+    loadData={"calculate_traffic_flow"}
     variables={{target_link:targetLink}}
 />
