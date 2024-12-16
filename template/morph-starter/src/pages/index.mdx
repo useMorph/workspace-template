@@ -1,48 +1,19 @@
-export const name = 'index';
-export const title = 'Sample page';
+export const title = "GA App";
 
-# Sample app
+# Starter App
 
-This application analyzes sample data about customer orders in retail.
+Morph is a full-stack framework for building data apps using Python, SQL and MDX.
 
-## Sales by Product
+`<DataTable/>` `<Embed/>` can access data from sql and python.
+You can find UI components [in the docs](https://docs.morph-data.io).
 
-Try setting the *Minimum Sales* to 5000.
+## Data
 
-export const minSales = variable("10000");
-
-<Card className="p-6 mt-2">
-    <label>Minimum Sales</label>
-    <VariableInput variable={minSales} />
-    <Embed
-        height="600px"
-        width="100%"
-        alias={"visualize"}
-        variables={{min_sales:minSales}}
-    />
-</Card>
-
-## Orders
-
-You can filter with **Product Name**.
-
-export const productSelected = variable("all");
-export const productNames = getJson({
-    alias: "get_product_names"
-})
-
-<Grid cols="1">
-    <VariableSelect variable={productSelected}>
-        <VariableSelectItem value="all">All</VariableSelectItem>
-        <VariableSelectItems items={productNames} labelKey="product_name" valueKey="product_name"/>
-    </VariableSelect>
-    <div>
-        <DataTable
-            alias={"get_all_orders"}
-            variables={{
-                product_name: productSelected
-            }}
-            height = {300}
-        />
-    </div>
+<Grid cols="2">
+  <div>
+    <DataTable loadData="example_data" height={300} />
+  </div>
+  <div>
+    <Embed loadData="example_chart" height={300} />
+  </div>
 </Grid>
