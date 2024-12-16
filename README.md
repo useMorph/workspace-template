@@ -24,10 +24,6 @@ poetry run pre-commit install
 
 1. Create a new directory in the `template` directory with the name of the template.
 2. Add the necessary files and directories to the new template directory.
-3. Make sure `.env` file is added because if it may be ignored by '.gitignore' file in the template directory.
-    ```shell
-    git add -f template/${TEMPLATE_DIR}/.env
-    ```
 
 ### Special Directories in the Template
 
